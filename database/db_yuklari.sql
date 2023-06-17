@@ -198,7 +198,7 @@ INSERT INTO `menus` (`id`, `user_id`, `title`, `url`, `icon`, `is_active`) VALUE
 (1, 2, 'Pengaturan Web', '', 'fas fa-fw fa-cog', 'Y'),
 (2, 2, 'Agenda', 'jadwal', 'fas fa-fw fa-users', 'Y'),
 (3, 2, 'Manajemen Media', '', 'fas fa-fw fa-school', 'Y'),
-(4, 2, 'Struktur Organisasi', 'struktur', 'fas fa-fw fa-sitemap', 'Y'),
+(4, 2, 'hubungi Organisasi', 'hubungi', 'fas fa-fw fa-sitemap', 'Y'),
 (5, 1, 'Manajemen User', 'user', 'fas fa-fw fa-user', 'Y'),
 (6, 2, 'Profile', '', 'fas fa-fw fa-home', 'Y');
 
@@ -290,7 +290,7 @@ INSERT INTO `submenus` (`id`, `menu_id`, `sub_title`, `sub_url`, `is_active`) VA
 (1, 1, 'Identitas Web', 'identitas', 'Y'),
 (2, 1, 'Sambutan', 'sambutan', 'Y'),
 (3, 3, 'Banner', 'banner', 'Y'),
-(4, 3, 'Fasilitas', 'fasilitas', 'Y'),
+(4, 3, 'anggota', 'anggota', 'Y'),
 (5, 3, 'Berita', 'berita', 'Y'),
 (6, 3, 'Background Jurusan', 'background', 'Y');
 

@@ -13,7 +13,7 @@
                     echo "active"; ?>">
                     <a class="nav-link" href="<?= base_url() ?>">Beranda</a>
                 </li>
-                <li class="nav-item dropdown <?php if ($title == 'Sejarah' || $title == 'Visi & Misi' || $title == 'Struktur' || $title == 'Fasilitas')
+                <li class="nav-item dropdown <?php if ($title == 'Sejarah' || $title == 'Visi & Misi' || $title == 'hubungi' || $title == 'anggota')
                     echo "active"; ?>">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -21,9 +21,8 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-item" href="<?= base_url('profil/sejarah') ?>">Sejarah</a>
-                        <a class="dropdown-item" href="<?= base_url('profil/visimisi') ?>">Visi & Misi</a>
-                        <a class="dropdown-item" href="<?= base_url('profil/struktur') ?>">Struktur Organisasi</a>
-                        <a class="dropdown-item" href="<?= base_url('profil/fasilitas') ?>">Fasilitas</a>
+                        <a class="dropdown-item" href="<?= base_url('profil/hubungi') ?>">Hubungi Kami</a>
+                        <a class="dropdown-item" href="<?= base_url('profil/anggota') ?>">Anggota</a>
                     </div>
                 </li>
                 <li class="nav-item <?php if ($title == 'Agenda')

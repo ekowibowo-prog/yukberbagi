@@ -1,7 +1,8 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class Admin extends CI_Controller {
+class Admin extends CI_Controller
+{
 
 	public function __construct()
 	{
@@ -9,19 +10,19 @@ class Admin extends CI_Controller {
 		is_login();
 		$this->load->model('admin_model', 'admin');
 		$this->load->model('menu_model', 'menu');
-		$this->load->model('fasilitas_model', 'fasilitas');
+		$this->load->model('anggota_model', 'anggota');
 		$this->load->model('berita_model', 'berita');
 
 	}
 
 	public function index()
 	{
-		$data['title'] 			 = 'Admin';
-		$data['page']				 = 'dashboard/index';
-		$data['total_fasilitas'] = $this->fasilitas->totalFasilitas();
-		$data['total_berita'] 	 = $this->berita->countBerita();
+		$data['title'] = 'Admin';
+		$data['page'] = 'dashboard/index';
+		$data['total_anggota'] = $this->anggota->totalanggota();
+		$data['total_berita'] = $this->berita->countBerita();
 		// $data['chart'] 			 = $this->admin->areaChart();
-      $data['pageChart'] 		 = '_chart';
+		$data['pageChart'] = '_chart';
 
 		$this->load->view('back/layouts/main', $data);
 	}

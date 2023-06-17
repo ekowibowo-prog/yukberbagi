@@ -1,22 +1,22 @@
 <script type="text/javascript">
 
-   let tableFasilitas;
+   let tableanggota;
 
    // Show Table
-   $(document).ready(function(){
+   $(document).ready(function () {
 
-      tableFasilitas = $('#tableFasilitas').DataTable({
+      tableanggota = $('#tableanggota').DataTable({
          processing: true,
          serverSide: true,
          order: [],
          ajax: {
-            'url': "<?= base_url('fasilitas/ajax_list') ?>",
+            'url': "<?= base_url('anggota/ajax_list') ?>",
             'type': "POST"
          },
          columnDefs: [
-            { 
-               'targets': [ 0, -1 ], 
-               'orderable': false, 
+            {
+               'targets': [0, -1],
+               'orderable': false,
             },
             { 'width': '10%', 'targets': -1 }
          ],
@@ -24,31 +24,31 @@
    });
 
    // Reload Table
-   function reload_table(){
-      tableFasilitas.ajax.reload(null, false);
+   function reload_table() {
+      tableanggota.ajax.reload(null, false);
    }
 
-	// Delete Menu
-   function delete_fasilitas(id){
+   // Delete Menu
+   function delete_anggota(id) {
       Swal.fire({
-         title: 'Hapus Data Fasilitas ini ?',
+         title: 'Hapus Data anggota ini ?',
          icon: 'warning',
          showCancelButton: true,
          confirmButtonColor: '#3085d6',
          cancelButtonColor: '#d33',
          confirmButtonText: 'Hapus!'
-         }).then((result) => {
+      }).then((result) => {
          if (result.value) {
             $.ajax({
                type: 'post',
                dataType: 'json',
-               url: '<?= base_url('fasilitas/delete'); ?>',
+               url: '<?= base_url('anggota/delete'); ?>',
                data: {
                   id: id
                },
-               success: function(data){
-                  if(data.status){
-                     tableFasilitas.row( $(this).parents('tr') ).remove().draw();
+               success: function (data) {
+                  if (data.status) {
+                     tableanggota.row($(this).parents('tr')).remove().draw();
                      Swal.fire({
                         icon: 'success',
                         title: 'Success',
@@ -56,7 +56,7 @@
                      });
                   }
                },
-               error: function(){
+               error: function () {
                   Swal.fire({
                      icon: 'error',
                      title: 'Oops...',

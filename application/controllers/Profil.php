@@ -1,45 +1,39 @@
-<?php 
-defined('BASEPATH') OR exit('No direct script access allowed');
+<?php
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class Profil extends CI_Controller {
-	
+class Profil extends CI_Controller
+{
+
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->model('fasilitas_model', 'fasilitas');
-		$this->load->model('struktur_model', 'struktur');
+		$this->load->model('anggota_model', 'anggota');
+		$this->load->model('hubungi_model', 'hubungi');
 	}
-	
+
 	public function sejarah()
 	{
-		$data['title']		= 'Sejarah';
-		$data['page']		= 'profil/sejarah';
+		$data['title'] = 'Sejarah';
+		$data['page'] = 'profil/sejarah';
 
 		$this->load->view('front/layouts/main', $data);
 	}
 
-	public function visimisi()
+
+	public function hubungi()
 	{
-		$data['title']		= 'Visi & Misi';
-		$data['page']		= 'profil/visimisi';
+		$data['title'] = 'hubungi Organisasi';
+		$data['page'] = 'profil/hubungi';
+		$data['hubungi'] = $this->hubungi->getData();
 
 		$this->load->view('front/layouts/main', $data);
 	}
 
-	public function struktur()
+	public function anggota()
 	{
-		$data['title']		= 'Struktur Organisasi';
-		$data['page']		= 'profil/struktur';
-		$data['struktur'] = $this->struktur->getData();
-
-		$this->load->view('front/layouts/main', $data);
-	}
-
-	public function fasilitas()
-	{
-		$data['title']		= 'Fasilitas';
-		$data['page']		= 'profil/fasilitas';
-		$data['fasilitas'] = $this->fasilitas->getAllFasility();
+		$data['title'] = 'anggota';
+		$data['page'] = 'profil/anggota';
+		$data['anggota'] = $this->anggota->getAllFasility();
 
 		$this->load->view('front/layouts/main', $data);
 	}

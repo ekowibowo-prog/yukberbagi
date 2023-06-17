@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 text-center">
-                YUK LARI
+                YUK BERBAGI
                 <p class="mt-3">Jln. Raya Purworejo</p>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
@@ -11,20 +11,18 @@
                     <a href="<?= base_url('profil/sejarah') ?>">
                         <li>Sejarah</li>
                     </a>
-                    <a href="<?= base_url('profil/visimisi') ?>">
-                        <li>Visi & Misi</li>
+
+                    <a href="<?= base_url('profil/hubungi') ?>">
+                        <li>Hubungi Kami</li>
                     </a>
-                    <a href="<?= base_url('profil/struktur') ?>">
-                        <li>Struktur Organisasi</li>
-                    </a>
-                    <a href="<?= base_url('profil/fasilitas') ?>">
-                        <li>Fasilitas</li>
+                    <a href="<?= base_url('profil/anggota') ?>">
+                        <li>Anggota</li>
                     </a>
                 </ul>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                 <h5>Kontak Kami</h5>
-                <p>Email : yuklari@gmail.com</p>
+                <p>Email : yukberbagi@gmail.com</p>
             </div>
         </div>
         <hr>

@@ -8,13 +8,13 @@
     <!-- Alert -->
     <div class="row">
         <div class="col">
-            <?php if($this->session->flashdata('message')) : ?>
-            <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                <?= $this->session->flashdata('message') ?>
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
+            <?php if ($this->session->flashdata('message')): ?>
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                    <?= $this->session->flashdata('message') ?>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
             <?php endif ?>
         </div>
     </div>
@@ -47,9 +47,9 @@
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
-                            <div class="text-s font-weight-bold text-success text-uppercase mb-1">Fasilitas</div>
+                            <div class="text-s font-weight-bold text-success text-uppercase mb-1">anggota</div>
                             <div class="h mb-0 font-weight-bold text-gray-800">
-                                <?= $total_fasilitas ?>
+                                <?= $total_anggota ?>
                             </div>
                         </div>
                         <div class="col-auto">
