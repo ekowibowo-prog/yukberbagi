@@ -23,6 +23,7 @@
             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                 <h5>Kontak Kami</h5>
                 <p>Email : yukberbagi@gmail.com</p>
+                <p>No.telp : 0812-1222-1212</p>
             </div>
         </div>
         <hr>
